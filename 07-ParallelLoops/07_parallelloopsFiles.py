@@ -10,7 +10,8 @@ def generate(name, outputs=[]):
 
 @bash_app
 def concat(inputs=[], outputs=[], stdout='stdout.txt', stderr='stderr.txt'):
-    return 'cat {0} >> {1}'.format(' '.join(inputs), outputs[0])
+    files_list = [i.filepath for i in inputs]
+    return 'cat {0} >> {1}'.format(' '.join(files_list), outputs[0])
 
 @python_app
 def total(inputs=[]):
