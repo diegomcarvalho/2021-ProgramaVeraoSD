@@ -7,15 +7,17 @@ parsl.load()
 # Map function that returns double the input integer
 @python_app
 def app_double(x):
-    return x*2
+    return x * 2
+
 
 # Reduce function that returns the sum of a list
 @python_app
 def app_sum(inputs=[]):
     return sum(inputs)
 
+
 # Create a list of integers
-items = range(0,4)
+items = range(0, 4)
 
 # Map phase: apply the double *app* function to each item in list
 mapped_results = []

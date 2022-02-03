@@ -1,3 +1,3 @@
 
 clean:
-	rm -fr runinfo hello-stdout
+	rm -fr runinfo hello-stdout output.txt
